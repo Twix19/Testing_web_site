@@ -1,14 +1,13 @@
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 import pageObject.LoginPageObject;
 import pageObject.СonstructorPageObject;
 
 public class ConstructorTest {
     WebDriver driver = new ChromeDriver();
-    //  WebDriver yandexDriver = new YandexDriver();
+
+
     СonstructorPageObject constructor = new СonstructorPageObject(driver);
     LoginPageObject login = new LoginPageObject(driver);
     @Test

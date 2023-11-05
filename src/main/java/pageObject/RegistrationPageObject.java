@@ -19,11 +19,17 @@ public class RegistrationPageObject {
 
     //Нажимаем на кнопку "Личный кабинет"
     private By personalArea = By.xpath(".//a[@class='AppHeader_header__link__3D_hX']/p[text()= 'Личный Кабинет']");
+   //Кнопка регистрации
     private By registrationArea = By.xpath(".//a[@class='Auth_link__1fOlj' and text() = 'Зарегистрироваться']");
+  //Кнопка для ввода имени
     private By nameButton = By.xpath("(.//label[text()='Имя'])/../input[@class='text input__textfield text_type_main-default']");
+   //Кнопка email
     private By emailButton = By.xpath("(.//label[text()='Email'])/../input[@class='text input__textfield text_type_main-default']");
+    //Кнопка для ввода пароля
     private By passwordButton = By.xpath("(.//label[text()='Пароль'])/../input[@class='text input__textfield text_type_main-default']");
+   //Кнопка для регистрации
     private By registrationButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    //Кнопка для входа в аккаунт
     private By loginToAccount = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']");
 
     public void clickPersonalArea() {

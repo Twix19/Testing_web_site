@@ -1,0 +1,4 @@
+pageObject\LoginPageObject.class
+pageObject\ÑonstructorPageObject.class
+org\example\Main.class
+pageObject\RegistrationPageObject.class

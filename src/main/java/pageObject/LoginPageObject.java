@@ -1,5 +1,6 @@
 package pageObject;
 
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -15,23 +16,35 @@ public class LoginPageObject {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(DRIVER_DURATION)); //испольуем ожидание
         driver.get(DRIVER_SITE);
     }
+    //Кнопка войти в аккаунт
     private By loginToAccount = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']");
+   //Кнопка email
     private By emailButton = By.xpath("(.//label[text()='Email'])/../input[@class='text input__textfield text_type_main-default']");
+   //Кнопка пароль
     private By passwordButton = By.xpath("(.//label[text()='Пароль'])/../input[@class='text input__textfield text_type_main-default']");
     private By loginButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    //Кнопка Личный кабинет
     private By personalAreaButton = By.xpath(".//a[@class='AppHeader_header__link__3D_hX']/p[text()= 'Личный Кабинет']");
+    //Кнопка регистрации
     private By registrationButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    //Кнопка входа
     private By comeInButton = By.xpath(".//a[@class='Auth_link__1fOlj']");
+    //Кнопка Восстановления пароля
     private By restorePasswordButton = By.xpath(".//a[text()='Восстановить пароль']");
+    //Кнопка Восстановить
     private By restoreButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
-
+    //Кнопка для поучения кода для восстановления пароля
     private By codeFromeEmailButton= By.xpath(".//label[text()='Введите код из письма']/../input[@class='text input__textfield text_type_main-default']");
-  private By comeInButtonInPersonalArea = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
-   private By saveButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
-   private By construktorButton = By.xpath(".//p[@class='AppHeader_header__linkText__3q_va ml-2']");
-   private By exitButton = By.xpath(".//button[@class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']");
-
-   private By stellarBurgerButton = By.xpath(".//div[@class='AppHeader_header__logo__2D0X2']");
+   //Кнопка входа в личном кабинете
+    private By comeInButtonInPersonalArea = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    //Кнопка сохранить
+    private By saveButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
+    //Кнопка Конструктор
+    private By construktorButton = By.xpath(".//p[@class='AppHeader_header__linkText__3q_va ml-2']");
+   //Кнопка Выхода
+    private By exitButton = By.xpath(".//button[@class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']");
+    //Кнопка логотипа
+    private By stellarBurgerButton = By.xpath(".//div[@class='AppHeader_header__logo__2D0X2']");
     public void clickloginToAccountButton(){
         driver.findElement(loginToAccount).click();
     }
