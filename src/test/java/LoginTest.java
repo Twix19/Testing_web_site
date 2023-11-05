@@ -45,7 +45,7 @@ public class LoginTest {
         login.clickPasswordButton();
         login.enterPasswordButton("vdh978h");
         login.clickCodeFromEmail(); //не кликабедьный элемент
-        login.enterCodeFromEmail("522c6e40-e9ec-4ac4-8fa3-fe14affadead"); //вручную заходим в восстпано пароль вводим почту получаем код и вставляем новый код и парооль сюда
+        login.enterCodeFromEmail("8134ff00-b604-4df7-af3d-db388d769446"); //вручную заходим в восстпано пароль вводим почту получаем код и вставляем новый код и парооль сюда
         login.clickSaveButton();
         login.clickloginEmailButton();
         login.enterloginEmailButton("luvd85@mail.ru");
