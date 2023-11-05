@@ -4,7 +4,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pageObject.RegistrationPageObject;
 
 public class RegistrationTest {
-    WebDriver driver = new ChromeDriver();
+    static final String PATH_TO_CHROME = "chromedriver-win64/chromedriver.exe";
+    static final String PATH_TO_YANDEX = "yandexdriver/yandexdriver.exe";
+    public WebDriver setUpDriver(){
+        System.setProperty("webdriver.chrome.driver", PATH_TO_CHROME);
+        WebDriver driver = new ChromeDriver();
+        return driver;
+    }
+    WebDriver driver = setUpDriver();
     RegistrationPageObject registration = new RegistrationPageObject(driver);
 
     @Test
