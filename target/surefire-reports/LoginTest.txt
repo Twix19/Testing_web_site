@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: LoginTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 47.17 s <<< FAILURE! - in LoginTest
+loginWithPersonalAreaButton(LoginTest)  Time elapsed: 5.305 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <p class="AppHeader_header__linkText__3q_va ml-2">...</p> is not clickable at point (1312, 44). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=119.0.6045.106)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d7b5dc3934ae15f529fc6201ebac6c4e, clickElement {id=99F1640CC4370934F7F396877D50E5C8_element_12}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\luvd8\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:19091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:19091/devtoo..., se:cdpVersion: 119.0.6045.106, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d7b5dc3934ae15f529fc6201ebac6c4e)] -> xpath: .//a[@class='AppHeader_header__link__3D_hX']/p[text()= 'Личный Кабинет']]
+Session ID: d7b5dc3934ae15f529fc6201ebac6c4e
+	at LoginTest.loginWithPersonalAreaButton(LoginTest.java:27)
+
+goToStellarBurger(LoginTest)  Time elapsed: 5.732 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <p class="AppHeader_header__linkText__3q_va ml-2">...</p> is not clickable at point (1312, 44). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=119.0.6045.106)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28356c793ca37328f670542abccffc53, clickElement {id=1003082D224A7212FF461AA39A45DDEE_element_12}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\luvd8\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:19228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:19228/devtoo..., se:cdpVersion: 119.0.6045.106, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (28356c793ca37328f670542abccffc53)] -> xpath: .//a[@class='AppHeader_header__link__3D_hX']/p[text()= 'Личный Кабинет']]
+Session ID: 28356c793ca37328f670542abccffc53
+	at LoginTest.goToStellarBurger(LoginTest.java:74)
+

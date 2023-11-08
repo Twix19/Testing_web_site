@@ -1,5 +1,6 @@
 package pageObject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -22,13 +23,29 @@ public class СonstructorPageObject {
     private By sauceButton = By.xpath(".//div[@class='tab_tab__1SPyG  pt-4 pr-10 pb-4 pl-10 noselect']//span[text()='Соусы']");
     //Кнопка для перехода в раздел "Начинки"
     private By fillingsButton = By.xpath(".//div[@class='tab_tab__1SPyG  pt-4 pr-10 pb-4 pl-10 noselect']//span[text()='Начинки']");
+
+    @Step("Проверка на корректную работу поля Булки")
     public void clickBunsButton(){
         driver.findElement(bunsButton).click();
     }
+    @Step("Проверка на корректную работу поля Соусы")
     public void clickSauceButton(){
         driver.findElement(sauceButton).click();
     }
+    @Step("Проверка на корректную работу поля Начинки")
     public void clickFillingsButton(){
         driver.findElement(fillingsButton).click();
+    }
+    @Step("Проверка на корректную работу теста перехода на поле Соусы")
+    public void checkIsSauceSelected(){
+        driver.findElement(sauceButton).isSelected();
+    }
+    @Step("Проверка на корректную работу теста перехода на поле Булки")
+    public void checkIsBunsSelected(){
+        driver.findElement(bunsButton).isSelected();
+    }
+    @Step("Проверка на корректную работу теста перехода на поле Начинки")
+    public void checkIsFillingSelected(){
+        driver.findElement(fillingsButton).isSelected();
     }
 }

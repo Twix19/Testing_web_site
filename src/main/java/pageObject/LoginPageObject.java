@@ -1,5 +1,6 @@
 package pageObject;
 
+import io.qameta.allure.Step;
 import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,66 +41,126 @@ public class LoginPageObject {
     //Кнопка сохранить
     private By saveButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
     //Кнопка Конструктор
-    private By construktorButton = By.xpath(".//p[@class='AppHeader_header__linkText__3q_va ml-2']");
+    private By construktorButton = By.xpath(".//p[contains(@class,'AppHeader_header__linkText__3q_va ml-2') and text()='Конструктор']");
    //Кнопка Выхода
     private By exitButton = By.xpath(".//button[@class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']");
     //Кнопка логотипа
     private By stellarBurgerButton = By.xpath(".//div[@class='AppHeader_header__logo__2D0X2']");
+
+    @Step("Вход в аккаунт через личный кабинет")
     public void clickloginToAccountButton(){
         driver.findElement(loginToAccount).click();
     }
+    @Step("Нажатие на поле Email")
     public void clickloginEmailButton(){
         driver.findElement(emailButton).click();
     }
+    @Step("Нажатие на поле Email и ввод данных")
     public void enterloginEmailButton(String email){
         driver.findElement(emailButton).click();
         driver.findElement(emailButton).sendKeys(email);
     }
+    @Step("Нажатие на поле пароль")
     public void clickPasswordButton(){
         driver.findElement(passwordButton).click();
     }
+    @Step("Нажатие на поле пароль и ввод данных")
     public void enterPasswordButton(String password){
         driver.findElement(passwordButton).click();
         driver.findElement(passwordButton).sendKeys(password);
     }
+    @Step("Вход в аккаунт")
     public void clickLoginButton(){
         driver.findElement(loginButton).click();
     }
+
+    @Step("Вход в личный кабинет")
     public void clickPersonalAreaButton(){
         driver.findElement(personalAreaButton).click();
     }
+    @Step("Регистрация пользователя")
     public void clickRegistrationButton(){
         driver.findElement(registrationButton).click();
     }
+    @Step("Вход")
     public void clickComeInButton(){
         driver.findElement(comeInButton).click();
     }
+    @Step("Восстановления пароля")
     public void clickRestorePassword(){
         driver.findElement(restorePasswordButton).click();
     }
+    @Step("Восстановления пароля")
     public void clickRestoreButton(){
         driver.findElement(restoreButton).click();
     }
+    @Step("Получение кода на email")
     public void clickCodeFromEmail(){
         driver.findElement(codeFromeEmailButton).click();
     }
+    @Step("Ввод полученного кода ")
     public void enterCodeFromEmail(String code){
         driver.findElement(codeFromeEmailButton).click();
         driver.findElement(codeFromeEmailButton).sendKeys(code);
     }
+    @Step("Сохранение пароля")
     public void clickSaveButton(){
         driver.findElement(saveButton).click();
     }
+    @Step("Вход в акаунт через личный кабинет")
     public void clickComeInButtonInPersonalArea(){
         driver.findElement(comeInButtonInPersonalArea).click();
     }
+    @Step("Нажатие на кнопку конструкор для заказов")
     public void clickConstructorButton(){
         driver.findElement(construktorButton).click();
     }
+
+    @Step("Выход из аккаунта")
     public void clickExit(){
         driver.findElement(exitButton).click();
     }
+    @Step("Переход на главную страницу")
     public void clickStellarBurgersButton(){
         driver.findElement(stellarBurgerButton).click();
     }
+    @Step("Проверка корректной работы конструктора")
+    public void isConstructorPageSelected(){
+        driver.findElement(construktorButton).isDisplayed();
+    }
+    @Step("Проверка корректной работы входа в аккаунт")
+    public void loginToAccountIsEvabled(){
+        driver.findElement(loginButton).isEnabled();
+    }
+    @Step("Проверка корректной работы входа в аккаунт через личный кабинет")
+    public void loginToAreaButtonIsEvabled(){
+        driver.findElement(loginButton).isEnabled();
+    }
+    @Step("Проверка корректной регистрации")
+    public void loginInRegistrationFormIsEvabled(){
+        driver.findElement(loginButton).isEnabled();
+    }
+    @Step("Проверка корректного восстановления пароя")
+    public void loginInRestorePasswordButtonIsEvabled(){
+        driver.findElement(comeInButtonInPersonalArea).isEnabled();
+    }
+    @Step("ППРоверка корректной работы личного кабинета")
+    public void checkPersonalAreaIsEvabled(){
+        driver.findElement(personalAreaButton).isEnabled();
+    }
+    @Step("Проверка работы конструктора")
+    public void constructorIsEnabled(){
+        driver.findElement(construktorButton).isEnabled();
+    }
+    @Step("Проверка корректной работы перехода на главную страницу")
+    public void stellarBurgerIsEnabled(){
+        driver.findElement(stellarBurgerButton).isEnabled();
+    }
+    @Step("Проверка корректного выхода")
+    public void checkExit(){
+        driver.findElement(exitButton).isEnabled();
+    }
+
 }
+
+

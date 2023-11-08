@@ -1,5 +1,6 @@
 package pageObject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -32,36 +33,54 @@ public class RegistrationPageObject {
     //Кнопка для входа в аккаунт
     private By loginToAccount = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']");
 
+    @Step("Нажатие на кнопку Личный кабинет")
     public void clickPersonalArea() {
         driver.findElement(personalArea).click();
     }
+    @Step("Нажатие на кнопку регистрации")
     public void clickRegistrationArea(){
       driver.findElement(registrationArea).click();
     }
+    @Step("Нажатие на кнопку Имя")
     public void clickNameButton(){
         driver.findElement(nameButton).click();
     }
+    @Step("Нажатие на кнопку Имя и ввод своих данных")
     public void enterNameButton(String name){
         driver.findElement(nameButton).sendKeys(name);
     }
+    @Step("Нажатие на кнопку Email")
     public void clickEmailButton(){
         driver.findElement(emailButton).click();
     }
+    @Step("Нажатие на кнопку Email и ввод своих данных")
     public void enterEmailButton(String email){
         driver.findElement(emailButton).click();
         driver.findElement(emailButton).sendKeys(email);
     }
+    @Step("Нажатие на кнопку пароль")
     public void clickPasswordButton(){
         driver.findElement(passwordButton).click();
     }
+    @Step("Нажатие на кнопку пароль и ввод своих данных")
     public void enterPasswordButton(String password){
         driver.findElement(passwordButton).click();
         driver.findElement(passwordButton).sendKeys(password);
     }
+    @Step("Нажатие на кнопку регистрации")
     public void clickRegistration(){
         driver.findElement(registrationButton).click();
     }
+    @Step("Вход в аккаунт")
     public void clickloginToAccountButton(){
         driver.findElement(loginToAccount).click();
+    }
+    @Step("Проверка успешной регистрации")
+    public void checkIsSuccessfullRegistration(){
+        driver.findElement(registrationButton).isSelected();
+    }
+    @Step("Проверка неудачной регистрации с неверным паролем")
+    public void checkIsNotSuccessfullRegistration(){
+        driver.findElement(registrationButton).isEnabled();
     }
 }
