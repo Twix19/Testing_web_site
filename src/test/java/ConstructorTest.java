@@ -6,10 +6,11 @@ import pageObject.СonstructorPageObject;
 import static org.junit.Assert.assertTrue;
 
 public class ConstructorTest {
-    static final String PATH_TO_CHROME = "chromedriver-win64/chromedriver.exe";
-    static final String PATH_TO_YANDEX = "yandexdriver/yandexdriver.exe";
     WebDriver driver = setUpDriver();
     СonstructorPageObject constructor = new СonstructorPageObject(driver);
+    static final String PATH_TO_CHROME = "chromedriver-win64/chromedriver.exe";
+    static final String PATH_TO_YANDEX = "yandexdriver/yandexdriver.exe";
+
     LoginPageObject login = new LoginPageObject(driver);
     public WebDriver setUpDriver(){
         System.setProperty("webdriver.chrome.driver", PATH_TO_CHROME);

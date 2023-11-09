@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,8 +29,6 @@ public class RegistrationTest {
         registration.enterPasswordButton("eidhi7bj");
         registration.clickRegistration();
         registration.checkIsSuccessfullRegistration();
-
-
     }
     @Test
     public void wrongPassword(){

@@ -79,6 +79,7 @@ public class LoginTest {
     public void goToStellarBurger(){
         login.clickPersonalAreaButton();
         login.clickStellarBurgersButton();
+        login.stellarBurgerIsEnabled();
     }
     @Test
     public void exit(){

@@ -144,7 +144,7 @@ public class LoginPageObject {
     public void loginInRestorePasswordButtonIsEvabled(){
         driver.findElement(comeInButtonInPersonalArea).isEnabled();
     }
-    @Step("ППРоверка корректной работы личного кабинета")
+    @Step("ПРоверка корректной работы личного кабинета")
     public void checkPersonalAreaIsEvabled(){
         driver.findElement(personalAreaButton).isEnabled();
     }
