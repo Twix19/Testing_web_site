@@ -53,14 +53,14 @@ public class LoginTest {
         login.enterloginEmailButton("luvd85@mail.ru");
         login.clickRestoreButton();
         login.clickPasswordButton();
-        login.enterPasswordButton("gg43uiug9");
+        login.enterPasswordButton("sfh8374983rgf");
         login.clickCodeFromEmail();
-        login.enterCodeFromEmail("26e0bcdc-bed8-4fa1-979e-1ee24f6e5ffc"); //вручную заходим в восстпано пароль вводим почту получаем код и вставляем новый код и парооль сюда
+        login.enterCodeFromEmail("ec953c6f-a991-448c-b3ae-5e40926988be5"); //вручную заходим в восстпано пароль вводим почту получаем код и вставляем новый код и парооль сюда
         login.clickSaveButton();
         login.clickloginEmailButton();
         login.enterloginEmailButton("luvd85@mail.ru");
         login.clickPasswordButton();
-        login.enterPasswordButton("gg43uiug9");
+        login.enterPasswordButton("sfh8374983rgf");
         login.clickComeInButtonInPersonalArea();
         login.loginInRestorePasswordButtonIsEvabled();
     }

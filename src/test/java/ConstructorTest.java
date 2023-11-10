@@ -2,12 +2,12 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageObject.LoginPageObject;
-import pageObject.СonstructorPageObject;
+import pageObject.ConstructorPageObject;
 import static org.junit.Assert.assertTrue;
 
 public class ConstructorTest {
     WebDriver driver = setUpDriver();
-    СonstructorPageObject constructor = new СonstructorPageObject(driver);
+    ConstructorPageObject constructor = new ConstructorPageObject(driver);
     static final String PATH_TO_CHROME = "chromedriver-win64/chromedriver.exe";
     static final String PATH_TO_YANDEX = "yandexdriver/yandexdriver.exe";
 

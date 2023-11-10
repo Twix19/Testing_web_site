@@ -111,5 +111,10 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.5</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.0</version>
+        </dependency>
     </dependencies>
 </project>

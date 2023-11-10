@@ -1,0 +1,3 @@
+pageObject\LoginPageObject.class
+pageObject\RegistrationPageObject.class
+pageObject\ConstructorPageObject.class
